@@ -71,11 +71,12 @@ Onrails::Application.configure do
   # Paperclip should use Amazon S3 on Heroku
   config.paperclip_defaults = {
     :storage => :s3,
-    :url => "http://omrailsgiffen.s3.amazonaws.com",
     :s3_credentials => {
       :bucket => ENV['AWS_BUCKET'],
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-    }
+    },
+    :path => "/:style/:id/:filename",
+    :url  => ":s3_bucket_url" # if you're using eu buckets, call it s3_eu_url
   }
 end
