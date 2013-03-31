@@ -8,18 +8,24 @@ $btnPrimaryBackground: green;
 @import 'bootstrap';
 @import 'bootstrap-responsive';
 
-.navbar-inner {
-	@include box-shadow(none !important);
-    border: 0;	
-}
+
 
 .footer {
-	margin-top:50 px;
 	color: $grayLight;
 	a{
         color: $gray;
     }
 }
+
+.container-body {
+	padding-top:30px;
+}
+
+.navbar-inner {
+	@include box-shadow(none !important);
+    border: 0;	
+}
+
 
 /* Require for jQuery Masonry */
 .box {
@@ -45,4 +51,37 @@ $btnPrimaryBackground: green;
 
 .description {
 	margin: 10px 0 5px;
+}
+
+html, body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+  height: 60px;
+}
+#footer {
+  background-color: #f5f5f5;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
