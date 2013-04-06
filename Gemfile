@@ -7,6 +7,8 @@ gem 'simple_form'
 gem 'bootstrap-sass', '~> 2.3.1.0'
 gem "paperclip"
 gem 'aws-sdk'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :production do
  	gem 'pg'
